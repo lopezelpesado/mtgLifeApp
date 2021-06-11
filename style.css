@@ -1,0 +1,361 @@
+:root {
+    --streamGreen: hsl(121, 100%, 49%); /* Not far from chartreuse */
+    --borderWidth: 1vw;
+    --boxShadowSize: 3vw;
+    --textShadow: 3vw;
+    --scanlineStrength: 5%;
+    --scanlineSize: 0.5vw;
+}
+
+html {
+    box-sizing: border-box; /* Flexible border-box reset */
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* All elements (including pseudo elements) will inherit border-box */
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse; /* Puts menu at the bottom */
+    height: 100%;
+    color: var(--streamGreen);
+    background-color: black;
+    font-family: 'VT323', monospace;
+    text-shadow: 0px 0px var(--textShadow) var(--streamGreen);
+}
+
+html:before {
+    position: absolute;
+    content:"";
+    background: repeating-linear-gradient(0, hsl(0, 0%, 0%, var(--scanlineStrength)), hsl(0, 0%, 0%, var(--scanlineStrength)) var(--scanlineSize), hsl(0, 0%, 50%, var(--scanlineStrength)) var(--scanlineSize), hsl(0, 0%, 50%, var(--scanlineStrength)) calc(var(--scanlineSize) * 2)) ;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 3;
+}
+
+nav {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: var(--streamGreen);
+    border-width: 0px 0px var(--borderWidth) var(--borderWidth);
+    border-style: solid;
+}
+
+.menuButton {
+    height: 100%;
+    width: 25%;
+    border: var(--streamGreen);
+    border-width: 0px var(--borderWidth) 0px 0px;
+    border-style: solid;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 125%;
+    text-shadow: inherit;
+    box-shadow: 0px 0px var(--boxShadowSize) 0px var(--streamGreen) inset;
+    letter-spacing: 0.25em;
+    align-self: center;
+    padding: 0px;
+    display: block;
+    font-weight: lighter;
+}
+
+.active {
+    font-weight: bolder;
+    text-shadow: 0px 0px calc(2 * var(--textShadow)) var(--streamGreen);
+    background-color: hsla(120, 19%, 12%, 0.2);
+}
+
+main {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px var(--boxShadowSize) 0px var(--streamGreen) inset;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: var(--streamGreen);
+    border-width: var(--borderWidth);
+    border-style: solid;
+}
+
+.menuContent {
+    display: none;
+    flex-direction: column;
+    padding: 5% 5% 5% 5%;
+} /* All sections will be hidden on page load... */
+
+#homeContent {
+    display: flex;
+} /* ...except the home section */
+
+#textWithImg {
+    display: grid;
+    grid-template-columns: 67% 33%;
+    grid-template-rows: auto;
+}
+
+#pButtonLocMob {
+    display: block;
+}
+
+#pButtonLocDesk {
+    display: none;
+}
+
+#magicContent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+p {
+    font-size: 5vw;
+    text-align: justify;
+    text-justify: auto;
+    margin: 5% 0 0 0;
+}
+
+a {
+    color: hsl(121, 100%, 66%);
+}
+
+a:visited {
+    color: hsl(121, 100%, 33%);
+}
+
+h1 {
+    font-size: 6vw;
+    margin: 0;
+}
+
+button {
+    /* /* height: 100%; */
+    width: 100%;
+    border: var(--streamGreen);
+    /* border-width: 0px var(--borderWidth) 0px 0px; */
+    border-style: solid;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    /* font-size: vw; */
+    text-shadow: inherit;
+    box-shadow: 0px 0px calc(0.25 * var(--boxShadowSize)) 0px var(--streamGreen) inset;
+    /* letter-spacing: 0.25em; */
+    align-self: center;
+    /* padding: 0px; */
+    display: block;
+    font-weight: lighter;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img {
+    /* filter: saturate(0); */
+    width: 100%;
+    /* align-self: center; */
+}
+
+#gameSetup label {
+    font-size: 7vw;
+}
+
+#gameSetup select {
+    font-size: 5vw;
+}
+
+#gameSetup input {
+    font-size: 5vw;
+}
+
+#gameSetup button {
+    font-size: 5vw;
+}
+
+#lifeCounters {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* select {
+    color: inherit;
+    background-color: inherit;
+    border-style: solid;
+    border-color: inherit;
+    font-family: inherit;
+}
+
+playerNumOption {
+    background-color: black;
+} */
+
+.player {
+    display: none;
+    width: 50%;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+}
+
+/* input {
+    font-family: inherit;
+    width: 100%;
+    background-color: inherit;
+    color: inherit;
+    border-color: inherit;
+    padding: 0;
+    text-shadow: inherit;
+    border-style: solid;
+} */
+
+#gameSetup {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#resetGame {
+    height: 5vmax;
+}
+
+.life {
+    text-align: center;
+    font-size: 10vw;
+}
+
+.playerName {
+    /* width: 80%; */
+    text-align: center;
+    font-family: inherit;
+    width: 100%;
+    background-color: inherit;
+    color: inherit;
+    border-color: inherit;
+    padding: 0;
+    text-shadow: inherit;
+    border-style: solid;
+}
+
+#resetGame {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+}
+
+#fluff {
+    display: block;
+}
+
+#prev, #next {
+    display: none;
+}
+
+#slideshow {
+    display: none;
+}
+
+.slide {
+    display: none;
+}
+
+@media only screen and (min-width: 768px), (orientation: landscape) {
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 20%;
+        border-width: var(--borderWidth) 0px 0px 0px;
+    }
+
+    main {
+        height: 100%;
+        width: 80%;
+    }
+
+    .menuButton {
+        height: 25%;
+        width: 100%;
+        border-width: 0px 0px var(--borderWidth) var(--borderWidth);
+        font-size: 6vw;
+        letter-spacing: 0.1em;
+    }
+
+    p {
+        font-size: 2vw;
+        margin: 2% 0 0 0;
+    }
+
+    label {
+        font-size: 2vw;
+    }
+    
+    select {
+        font-size: 2vw;
+    }
+
+    input {
+        font-size: 2vw;
+    }
+
+    button {
+        font-size: 2vw;
+    }
+
+    #pButtonLocMob {
+        display: none;
+    }
+    
+    #pButtonLocDesk {
+        display: block;
+    }
+
+    .player {
+        width: 25%;
+    }
+
+    #catsContent {
+        flex-direction: row;
+        justify-content: center;
+        padding: 2% 2% 2% 2%;
+    }
+
+    #fluff {
+        display: none;
+    }
+
+    .slide {
+        display: none;
+    }
+
+    #prev, #next {
+        display: block;
+        width: inherit;
+        height: 100%;
+    }
+
+    #slideshow {
+        display: block;
+        align-self: center;
+        width: 100%;
+    }
+
+    .activeSlide {
+        display: block;
+        max-width: 100%;
+    }
+}
