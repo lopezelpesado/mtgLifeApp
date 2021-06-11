@@ -7,5 +7,5 @@ This README is for my [mtgLifeApp](https://lopezelpesado.github.io/mtgLifeApp/)!
 This is everything I need todo:
 
 - [x] Import HTML and
-- [ ] CSS and
-- [ ] JS from my [application website](https://github.com/lopezelpesado/application-website)
+- [x] CSS and
+- [x] JS from my [application website](https://github.com/lopezelpesado/application-website)
