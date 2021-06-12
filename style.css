@@ -85,10 +85,10 @@ main {
 }
 
 .menuContent {
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 5% 5% 5% 5%;
-} /* All sections will be hidden on page load... */
+}
 
 #homeContent {
     display: flex;
@@ -275,7 +275,7 @@ playerNumOption {
     }
 
     nav {
-        display: flex;
+        display: none;
         flex-direction: column;
         height: 100%;
         width: 20%;
@@ -284,7 +284,7 @@ playerNumOption {
 
     main {
         height: 100%;
-        width: 80%;
+        width: 100%;
     }
 
     .menuButton {
