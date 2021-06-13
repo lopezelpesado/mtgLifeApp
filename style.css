@@ -37,43 +37,7 @@ html:before {
     z-index: 3;
 }
 
-nav {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    border: var(--streamGreen);
-    border-width: 0px 0px var(--borderWidth) var(--borderWidth);
-    border-style: solid;
-}
-
-.menuButton {
-    height: 100%;
-    width: 25%;
-    border: var(--streamGreen);
-    border-width: 0px var(--borderWidth) 0px 0px;
-    border-style: solid;
-    color: inherit;
-    background-color: inherit;
-    font-family: inherit;
-    font-size: 125%;
-    text-shadow: inherit;
-    box-shadow: 0px 0px var(--boxShadowSize) 0px var(--streamGreen) inset;
-    letter-spacing: 0.25em;
-    align-self: center;
-    padding: 0px;
-    display: block;
-    font-weight: lighter;
-}
-
-.active {
-    font-weight: bolder;
-    text-shadow: 0px 0px calc(2 * var(--textShadow)) var(--streamGreen);
-    background-color: hsla(120, 19%, 12%, 0.2);
-}
-
 main {
-    height: 90%;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px var(--boxShadowSize) 0px var(--streamGreen) inset;
@@ -82,33 +46,6 @@ main {
     border: var(--streamGreen);
     border-width: var(--borderWidth);
     border-style: solid;
-}
-
-.menuContent {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 5% 5% 5%;
-}
-
-#homeContent {
-    display: flex;
-} /* ...except the home section */
-
-#textWithImg {
-    display: grid;
-    grid-template-columns: 67% 33%;
-    grid-template-rows: auto;
-}
-
-#pButtonLocMob {
-    display: block;
-}
-
-#pButtonLocDesk {
-    display: none;
-}
-
-#magicContent {
     position: relative;
     height: 100%;
     width: 100%;
@@ -156,12 +93,6 @@ button {
 
 button:hover {
     cursor: pointer;
-}
-
-img {
-    /* filter: saturate(0); */
-    width: 100%;
-    /* align-self: center; */
 }
 
 #gameSetup label {
@@ -252,47 +183,10 @@ playerNumOption {
     align-self: center;
 }
 
-#fluff {
-    display: block;
-}
-
-#prev, #next {
-    display: none;
-}
-
-#slideshow {
-    display: none;
-}
-
-.slide {
-    display: none;
-}
-
 @media only screen and (min-width: 768px), (orientation: landscape) {
     body {
         display: flex;
         flex-direction: row;
-    }
-
-    nav {
-        display: none;
-        flex-direction: column;
-        height: 100%;
-        width: 20%;
-        border-width: var(--borderWidth) 0px 0px 0px;
-    }
-
-    main {
-        height: 100%;
-        width: 100%;
-    }
-
-    .menuButton {
-        height: 25%;
-        width: 100%;
-        border-width: 0px 0px var(--borderWidth) var(--borderWidth);
-        font-size: 6vw;
-        letter-spacing: 0.1em;
     }
 
     p {
@@ -316,46 +210,7 @@ playerNumOption {
         font-size: 2vw;
     }
 
-    #pButtonLocMob {
-        display: none;
-    }
-    
-    #pButtonLocDesk {
-        display: block;
-    }
-
     .player {
         width: 25%;
-    }
-
-    #catsContent {
-        flex-direction: row;
-        justify-content: center;
-        padding: 2% 2% 2% 2%;
-    }
-
-    #fluff {
-        display: none;
-    }
-
-    .slide {
-        display: none;
-    }
-
-    #prev, #next {
-        display: block;
-        width: inherit;
-        height: 100%;
-    }
-
-    #slideshow {
-        display: block;
-        align-self: center;
-        width: 100%;
-    }
-
-    .activeSlide {
-        display: block;
-        max-width: 100%;
     }
 }
