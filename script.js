@@ -12,17 +12,7 @@ const setupSubmitButton = document.getElementById("gameSetupSubmit");
 
 const playersArr = Array.from(document.getElementsByClassName("player"));
 
-// const plusFiveButtons = Array.from(document.getElementsByClassName("+5"));
-
-// const plusOneButtons = Array.from(document.getElementsByClassName("+1"));
-
-// const minusOneButtons = Array.from(document.getElementsByClassName("-1"));
-
-// const minusFiveButtons = Array.from(document.getElementsByClassName("-5"));
-
 const lifeTotals = Array.from(document.getElementsByClassName("life"));
-
-// const resetLifeTotalButtons = Array.from(document.getElementsByClassName("resetLifeTotal"));
 
 const counterButtons = Array.from(document.getElementById("lifeCounters").getElementsByTagName("button"));
 
