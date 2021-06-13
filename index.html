@@ -16,101 +16,99 @@
 
     <body>
         <main>
-            <section id="magicContent" class="magic menuContent">
-                <form id="gameSetup">
-                    <label for="players">How many players?</label>
+            <form id="gameSetup">
+                <label for="players">How many players?</label>
 
-                    <select name="numberOfPlayers" id="setupPlayers">
-                        <option class="playerNumOption" value="2">2</option>
+                <select name="numberOfPlayers" id="setupPlayers">
+                    <option class="playerNumOption" value="2">2</option>
 
-                        <option class="playerNumOption" value="3">3</option>
+                    <option class="playerNumOption" value="3">3</option>
 
-                        <option class="playerNumOption" value="4">4</option>
-                    </select>
+                    <option class="playerNumOption" value="4">4</option>
+                </select>
+                
+                <label for="startingLife">Starting life total:</label>
+                
+                <input type="number" id="setupLife" name="startingLife" min="20" step="1" placeholder="20" list="lifeList">
+
+                <datalist id="lifeList">
+                    <option value="20"></option>
                     
-                    <label for="startingLife">Starting life total:</label>
+                    <option value="25"></option>
                     
-                    <input type="number" id="setupLife" name="startingLife" min="20" step="1" placeholder="20" list="lifeList">
+                    <option value="40"></option>
+                </datalist>
 
-                    <datalist id="lifeList">
-                        <option value="20"></option>
-                        
-                        <option value="25"></option>
-                        
-                        <option value="40"></option>
-                    </datalist>
+                <button id="gameSetupSubmit">SUBMIT</button>
+            </form>
 
-                    <button id="gameSetupSubmit">SUBMIT</button>
-                </form>
+            <section id="lifeCounters">
+                <section class="player" id="p1">
+                    <input class="playerName" type="text" aria-label="Enter the name of Player 1." placeholder="PLAYER 1">
 
-                <section id="lifeCounters">
-                    <section class="player" id="p1">
-                        <input class="playerName" type="text" aria-label="Enter the name of Player 1." placeholder="PLAYER 1">
+                    <button type="button" class="+5">+5</button>
+        
+                    <button type="button" class="+1">+1</button>
 
-                        <button type="button" class="+5">+5</button>
-            
-                        <button type="button" class="+1">+1</button>
+                    <p class="life"></p>
 
-                        <p class="life"></p>
+                    <button type="button" class="-1">-1</button>
 
-                        <button type="button" class="-1">-1</button>
+                    <button type="button" class="-5">-5</button>
 
-                        <button type="button" class="-5">-5</button>
+                    <button type="button" class="resetLifeTotal">RESET</button>
+                </section>
+                
+                <section class="player" id="p2">
+                    <input class="playerName" type="text" aria-label="Enter the name of Player 2." placeholder="PLAYER 2">
 
-                        <button type="button" class="resetLifeTotal">RESET</button>
-                    </section>
-                    
-                    <section class="player" id="p2">
-                        <input class="playerName" type="text" aria-label="Enter the name of Player 2." placeholder="PLAYER 2">
+                    <button type="button" class="+5">+5</button>
+        
+                    <button type="button" class="+1">+1</button>
 
-                        <button type="button" class="+5">+5</button>
-            
-                        <button type="button" class="+1">+1</button>
+                    <p class="life"></p>
 
-                        <p class="life"></p>
+                    <button type="button" class="-1">-1</button>
 
-                        <button type="button" class="-1">-1</button>
+                    <button type="button" class="-5">-5</button>
 
-                        <button type="button" class="-5">-5</button>
-
-                        <button type="button" class="resetLifeTotal">RESET</button>
-                    </section>
-
-                    <section class="player" id="p3">
-                        <input class="playerName" type="text" aria-label="Enter the name of Player 3." placeholder="PLAYER 3">
-
-                        <button type="button" class="+5">+5</button>
-            
-                        <button type="button" class="+1">+1</button>
-
-                        <p class="life"></p>
-
-                        <button type="button" class="-1">-1</button>
-
-                        <button type="button" class="-5">-5</button>
-
-                        <button type="button" class="resetLifeTotal">RESET</button>
-                    </section>
-
-                    <section class="player" id="p4">
-                        <input class="playerName" type="text" aria-label="Enter the name of Player 4." placeholder="PLAYER 4">
-
-                        <button type="button" class="+5">+5</button>
-            
-                        <button type="button" class="+1">+1</button>
-
-                        <p class="life"></p>
-
-                        <button type="button" class="-1">-1</button>
-
-                        <button type="button" class="-5">-5</button>
-
-                        <button type="button" class="resetLifeTotal">RESET</button>
-                    </section>
+                    <button type="button" class="resetLifeTotal">RESET</button>
                 </section>
 
-                <button id="resetGame">RESET GAME</button>
+                <section class="player" id="p3">
+                    <input class="playerName" type="text" aria-label="Enter the name of Player 3." placeholder="PLAYER 3">
+
+                    <button type="button" class="+5">+5</button>
+        
+                    <button type="button" class="+1">+1</button>
+
+                    <p class="life"></p>
+
+                    <button type="button" class="-1">-1</button>
+
+                    <button type="button" class="-5">-5</button>
+
+                    <button type="button" class="resetLifeTotal">RESET</button>
+                </section>
+
+                <section class="player" id="p4">
+                    <input class="playerName" type="text" aria-label="Enter the name of Player 4." placeholder="PLAYER 4">
+
+                    <button type="button" class="+5">+5</button>
+        
+                    <button type="button" class="+1">+1</button>
+
+                    <p class="life"></p>
+
+                    <button type="button" class="-1">-1</button>
+
+                    <button type="button" class="-5">-5</button>
+
+                    <button type="button" class="resetLifeTotal">RESET</button>
+                </section>
             </section>
+
+            <button id="resetGame">RESET GAME</button>
         </main>
     </body>
 </html>
