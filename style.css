@@ -49,7 +49,7 @@ main {
     position: relative;
     height: 100%;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 p {
@@ -93,6 +93,13 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+#gameSetup {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 5vh;
 }
 
 #gameSetup label {
@@ -148,12 +155,6 @@ playerNumOption {
     border-style: solid;
 } */
 
-#gameSetup {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-}
-
 #resetGame {
     height: 5vmax;
 }
@@ -189,6 +190,10 @@ playerNumOption {
         flex-direction: row;
     }
 
+    main {
+        justify-content: center;
+    }
+
     p {
         font-size: 2vw;
         margin: 2% 0 0 0;
@@ -212,5 +217,9 @@ playerNumOption {
 
     .player {
         width: 25%;
+    }
+
+    #gameSetup {
+        margin-bottom: 0;
     }
 }

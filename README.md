@@ -4,7 +4,7 @@ This README is for my [mtgLifeApp](https://lopezelpesado.github.io/mtgLifeApp/)!
 
 ## Ideas
 
-Here are some thoughts:
+Here are some thoughts on design and functionality:
 
 - [ ] Split 1 and 5 buttons horizontally as opposed to vertically so that they sit side by side as opposed to on top of each other, this should save space
 - [ ] Names and life totals should initially only be displayed. On mobile, when a life total is tapped, it takes up the full screen and the controls appear (maybe on desktop just the controls appear). When tapped again, the display reverts to what it was
@@ -24,7 +24,7 @@ This is everything I need todo:
 - [x] Review HTML and remove redundant IDs and simplify code
 - [x] Review CSS
 - [x] Review JS
-- [ ] Bring game setup to the bottom of the screen on mobile
+- [x] Bring game setup to the bottom of the screen on mobile
 - [ ] Finish button styling
 - [ ] Style input elements
 - [ ] Make player sections bigger
