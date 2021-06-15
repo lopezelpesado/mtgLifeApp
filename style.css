@@ -89,6 +89,7 @@ button {
     /* padding: 0px; */
     display: block;
     font-weight: lighter;
+    margin-top: 2vh;
 }
 
 button:hover {
@@ -155,10 +156,6 @@ playerNumOption {
     border-style: solid;
 } */
 
-#resetGame {
-    height: 5vmax;
-}
-
 .life {
     text-align: center;
     font-size: 10vw;
@@ -179,9 +176,10 @@ playerNumOption {
 
 #resetGame {
     display: none;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     align-self: center;
+    height: 5vmax;
 }
 
 @media only screen and (min-width: 768px), (orientation: landscape) {
@@ -221,5 +219,15 @@ playerNumOption {
 
     #gameSetup {
         margin-bottom: 0;
+    }
+
+    #resetGame {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        align-self: center;
+        height: 5vmax;
+        border-width: var(--borderWidth) 0px 0px 0px;
+        box-shadow: 0px var(--boxShadowSize) var(--boxShadowSize) calc(-1 * var(--boxShadowSize)) var(--streamGreen) inset;
     }
 }
